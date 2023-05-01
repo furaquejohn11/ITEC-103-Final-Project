@@ -1,0 +1,24 @@
+D:\Visual Studio 2022\ATM Draft\ATM Draft\bin\Debug\ATM Draft.exe.config
+D:\Visual Studio 2022\ATM Draft\ATM Draft\bin\Debug\ATM Draft.exe
+D:\Visual Studio 2022\ATM Draft\ATM Draft\bin\Debug\ATM Draft.pdb
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM Draft.csproj.AssemblyReference.cache
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM Draft.csproj.SuggestedBindingRedirects.cache
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormLogin.resources
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormWelcome.resources
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.Properties.Resources.resources
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM Draft.csproj.GenerateResource.cache
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM Draft.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM Draft.exe
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM Draft.pdb
+D:\Visual Studio 2022\ATM Draft\ATM Draft\bin\Debug\EntityFramework.dll
+D:\Visual Studio 2022\ATM Draft\ATM Draft\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio 2022\ATM Draft\ATM Draft\bin\Debug\System.Data.SQLite.dll
+D:\Visual Studio 2022\ATM Draft\ATM Draft\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Visual Studio 2022\ATM Draft\ATM Draft\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Visual Studio 2022\ATM Draft\ATM Draft\bin\Debug\EntityFramework.xml
+D:\Visual Studio 2022\ATM Draft\ATM Draft\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visual Studio 2022\ATM Draft\ATM Draft\bin\Debug\System.Data.SQLite.xml
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM Draft.csproj.CopyComplete
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormMain.resources
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormMenu.resources
+D:\Visual Studio 2022\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormBalance.resources
