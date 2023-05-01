@@ -19,6 +19,11 @@ namespace ATM_Draft
             InitializeComponent();
         }
 
+        private void FormWelcome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private async void btnSubmit_Click(object sender, EventArgs e)
         {
             bool isValid = await CheckID();
@@ -63,5 +68,7 @@ namespace ATM_Draft
                 return false;
             }
         }
+
+        
     }
 }

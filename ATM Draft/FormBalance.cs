@@ -56,8 +56,8 @@ namespace ATM_Draft
                                 double current = Convert.ToDouble(reader["SAVINGS"]);
                                 double available = Convert.ToDouble(reader["SAVINGS"].ToString());
 
-                                lblCurrent.Text = "₱ " + string.Format("{0:0.00}", current);
-                                lblAvailable.Text = "₱ " + string.Format("{0:0.00}", available);
+                                lblCurrent.Text = "₱ " + current.ToString("N2");
+                                lblAvailable.Text = "₱ " + available.ToString("N2");
 
 
                             }
@@ -73,6 +73,13 @@ namespace ATM_Draft
             
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var frmWelcome = new FormWelcome();
+            frmWelcome.Show();
+
+            var frmMain = (FormMain)this.ParentForm;
+            frmMain.Hide();
+        }
     }
 }

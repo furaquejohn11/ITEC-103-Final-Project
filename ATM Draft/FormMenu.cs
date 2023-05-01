@@ -24,17 +24,20 @@ namespace ATM_Draft
             label2.Text = id;
         }
 
-        private void btnBalance_Click(object sender, EventArgs e)
+        private void OpenForm(Form form)
         {
-            var frmBalance = new FormBalance(id);
             var mainForm = (FormMain)this.ParentForm;
-            FormMain.ShowFormInPanel(frmBalance, mainForm.pnlChildForm);
-            
-
-
-
+            FormMain.ShowFormInPanel(form, mainForm.pnlChildForm);
         }
 
-        
+        private void btnBalance_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormBalance(id));   
+        }
+
+        private void btnWithdraw_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormWithdraw(id));
+        }
     }
 }
