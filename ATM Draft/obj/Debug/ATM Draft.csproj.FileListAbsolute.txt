@@ -47,3 +47,4 @@ C:\Users\John Patrick\Desktop\ATM Draft\ATM Draft\obj\Debug\ATM Draft.csproj.Cop
 C:\Users\John Patrick\Desktop\ATM Draft\ATM Draft\obj\Debug\ATM Draft.exe
 C:\Users\John Patrick\Desktop\ATM Draft\ATM Draft\obj\Debug\ATM Draft.pdb
 C:\Users\John Patrick\Desktop\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormWithdraw.resources
+C:\Users\John Patrick\Desktop\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormChangePass.resources

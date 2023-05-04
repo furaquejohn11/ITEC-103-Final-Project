@@ -36,7 +36,7 @@
             this.btnWithdraw = new System.Windows.Forms.Button();
             this.btnFastCash = new System.Windows.Forms.Button();
             this.btnCredit = new System.Windows.Forms.Button();
-            this.btnMore = new System.Windows.Forms.Button();
+            this.btnChangePass = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -115,14 +115,15 @@
             this.btnCredit.Text = "CREDIT CARD CASH ADVANCE";
             this.btnCredit.UseVisualStyleBackColor = true;
             // 
-            // btnMore
+            // btnChangePass
             // 
-            this.btnMore.Location = new System.Drawing.Point(545, 333);
-            this.btnMore.Name = "btnMore";
-            this.btnMore.Size = new System.Drawing.Size(211, 55);
-            this.btnMore.TabIndex = 10;
-            this.btnMore.Text = "MORE";
-            this.btnMore.UseVisualStyleBackColor = true;
+            this.btnChangePass.Location = new System.Drawing.Point(545, 333);
+            this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.Size = new System.Drawing.Size(211, 55);
+            this.btnChangePass.TabIndex = 10;
+            this.btnChangePass.Text = "CHANGE PASSWORD";
+            this.btnChangePass.UseVisualStyleBackColor = true;
+            this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
             // label2
             // 
@@ -139,7 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 517);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnMore);
+            this.Controls.Add(this.btnChangePass);
             this.Controls.Add(this.btnCredit);
             this.Controls.Add(this.btnFastCash);
             this.Controls.Add(this.btnWithdraw);
@@ -167,7 +168,7 @@
         private System.Windows.Forms.Button btnWithdraw;
         private System.Windows.Forms.Button btnFastCash;
         private System.Windows.Forms.Button btnCredit;
-        private System.Windows.Forms.Button btnMore;
+        private System.Windows.Forms.Button btnChangePass;
         private System.Windows.Forms.Label label2;
     }
 }

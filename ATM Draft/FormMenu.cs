@@ -39,5 +39,10 @@ namespace ATM_Draft
         {
             OpenForm(new FormWithdraw(id));
         }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormChangePass(id));
+        }
     }
 }

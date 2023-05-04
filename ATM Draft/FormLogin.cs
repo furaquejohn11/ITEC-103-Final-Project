@@ -50,7 +50,7 @@ namespace ATM_Draft
             {
                 numOfTries--;
                 MessageBox.Show("WRONG PASSWORD TRY AGAIN! " + numOfTries + " left!");
-                mtxtPIN.Text = "";
+                mtxtPIN.Clear();
             }
         }
         private async Task<bool> CheckAccount()
@@ -67,7 +67,7 @@ namespace ATM_Draft
                     using (var command = new SQLiteCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@ID", id);
-                        command.Parameters.AddWithValue("@PASSWORD", mtxtPIN.ValidateText());
+                        command.Parameters.AddWithValue("@PASSWORD", mtxtPIN.Text);
                         using (var reader = await command.ExecuteReaderAsync())
                         {
                             return reader.Read();
@@ -82,5 +82,9 @@ namespace ATM_Draft
             }
         }
 
+        private void mtxtPIN_Enter(object sender, EventArgs e)
+        {
+            mtxtPIN.SelectionStart = 0;
+        }
     }
 }
