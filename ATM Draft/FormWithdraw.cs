@@ -13,17 +13,20 @@ namespace ATM_Draft
     public partial class FormWithdraw : Form
     {
         private string id { get; set; }
-        public FormWithdraw(string id)
+        private string source { get; set; }
+        public FormWithdraw(string id, string source)
         {
             InitializeComponent();
             this.id = id;
+            this.source = source;
         }
 
         private void FormWithdraw_Load(object sender, EventArgs e)
         {
-
+            label3.Text = source;
         }
 
+        // Cancel button
         private void button3_Click(object sender, EventArgs e)
         {
             var frmMenu = new FormMenu(id);

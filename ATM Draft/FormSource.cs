@@ -10,18 +10,13 @@ using System.Windows.Forms;
 
 namespace ATM_Draft
 {
-    public partial class FormMenu : Form
+    public partial class FormSource : Form
     {
         private string id { get; set; }
-        public FormMenu(string id)
+        public FormSource(string id)
         {
             InitializeComponent();
             this.id = id;
-        }
-
-        private void FormMenu_Load(object sender, EventArgs e)
-        {
-            label2.Text = id;
         }
 
         private void OpenForm(Form form)
@@ -30,19 +25,21 @@ namespace ATM_Draft
             FormMain.ShowFormInPanel(form, mainForm.pnlChildForm);
         }
 
-        private void btnBalance_Click(object sender, EventArgs e)
+        private void btnSavings_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormBalance(id));   
+            OpenForm(new FormWithdraw(id, "SAVINGS"));
         }
 
-        private void btnWithdraw_Click(object sender, EventArgs e)
+        private void btnCheckings_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormSource(id));
+            OpenForm(new FormWithdraw(id, "CHECKINGS"));
         }
 
-        private void btnChangePass_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormChangePass(id));
+            OpenForm(new FormMenu(id));
         }
+
+        
     }
 }
