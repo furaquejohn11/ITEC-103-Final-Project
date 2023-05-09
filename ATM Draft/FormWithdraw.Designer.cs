@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtCurrentPass = new System.Windows.Forms.MaskedTextBox();
+            this.btnYes = new System.Windows.Forms.Button();
+            this.txtAmount = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -56,26 +56,27 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button1
+            // btnYes
             // 
-            this.button1.Location = new System.Drawing.Point(605, 324);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 55);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "YES";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnYes.Location = new System.Drawing.Point(605, 324);
+            this.btnYes.Name = "btnYes";
+            this.btnYes.Size = new System.Drawing.Size(211, 55);
+            this.btnYes.TabIndex = 8;
+            this.btnYes.Text = "YES";
+            this.btnYes.UseVisualStyleBackColor = true;
+            this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
-            // txtCurrentPass
+            // txtAmount
             // 
-            this.txtCurrentPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCurrentPass.Location = new System.Drawing.Point(300, 75);
-            this.txtCurrentPass.Mask = "000000";
-            this.txtCurrentPass.Name = "txtCurrentPass";
-            this.txtCurrentPass.PromptChar = ' ';
-            this.txtCurrentPass.Size = new System.Drawing.Size(258, 31);
-            this.txtCurrentPass.TabIndex = 11;
-            this.txtCurrentPass.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.txtCurrentPass.ValidatingType = typeof(int);
+            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount.Location = new System.Drawing.Point(300, 75);
+            this.txtAmount.Mask = "000000";
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.PromptChar = ' ';
+            this.txtAmount.Size = new System.Drawing.Size(258, 31);
+            this.txtAmount.TabIndex = 11;
+            this.txtAmount.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtAmount.ValidatingType = typeof(int);
             // 
             // label2
             // 
@@ -104,8 +105,8 @@
             this.ClientSize = new System.Drawing.Size(870, 517);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtCurrentPass);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtAmount);
+            this.Controls.Add(this.btnYes);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -121,8 +122,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MaskedTextBox txtCurrentPass;
+        private System.Windows.Forms.Button btnYes;
+        private System.Windows.Forms.MaskedTextBox txtAmount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }
