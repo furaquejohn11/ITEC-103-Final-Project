@@ -32,12 +32,12 @@ namespace ATM_Draft
 
         private void btnBalance_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormBalance(id));   
+            OpenForm(new FormSource(id, "BALANCE"));   
         }
 
         private void btnWithdraw_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormSource(id));
+            OpenForm(new FormSource(id, "WITHDRAW"));
         }
 
         private void btnChangePass_Click(object sender, EventArgs e)

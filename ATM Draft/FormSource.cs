@@ -13,10 +13,12 @@ namespace ATM_Draft
     public partial class FormSource : Form
     {
         private string id { get; set; }
-        public FormSource(string id)
+        private string option { get; set; }
+        public FormSource(string id, string option)
         {
             InitializeComponent();
             this.id = id;
+            this.option = option;
         }
 
         private void OpenForm(Form form)
@@ -25,14 +27,29 @@ namespace ATM_Draft
             FormMain.ShowFormInPanel(form, mainForm.pnlChildForm);
         }
 
+        private void OpenFormOption(string source)
+        {
+            switch (option)
+            {
+                case "BALANCE":
+                    OpenForm(new FormBalance(id, source));
+                    break;
+                case "WITHDRAW":
+                    OpenForm(new FormWithdraw(id, source));
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void btnSavings_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormWithdraw(id, "SAVINGS"));
+            OpenFormOption("SAVINGS");
         }
 
         private void btnCheckings_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormWithdraw(id, "CHECKINGS"));
+            OpenFormOption("CHECKINGS");
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

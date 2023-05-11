@@ -135,8 +135,15 @@ namespace ATM_Draft
 
                     await command.ExecuteNonQueryAsync();
 
-                    MessageBox.Show("YOUR NEW BALANCE IS " + newBalance);
-                        
+                    double amount = double.Parse(txtAmount.Text);
+                    MessageBox.Show("You successfully withdraw PHP " + amount.ToString("N2"));
+
+                    var frmWelcome = new FormWelcome();
+                    frmWelcome.Show();
+
+                    var frmMain = (FormMain)this.ParentForm;
+                    frmMain.Hide();
+
                 }
                 
             }

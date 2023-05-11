@@ -15,10 +15,12 @@ namespace ATM_Draft
     public partial class FormBalance : Form
     {
         private string id { get; set; }
-        public FormBalance(string id)
+        private string source { get; set; }
+        public FormBalance(string id, string source)
         {
             InitializeComponent();
             this.id = id;
+            this.source = source;
         }
 
         private async void FormBalance_Load(object sender, EventArgs e)
@@ -53,8 +55,8 @@ namespace ATM_Draft
                         {
                             if (reader.Read())
                             {
-                                double current = Convert.ToDouble(reader["SAVINGS"]);
-                                double available = Convert.ToDouble(reader["SAVINGS"].ToString());
+                                double current = Convert.ToDouble(reader[source]);
+                                double available = Convert.ToDouble(reader[source]) - 500;
 
                                 lblCurrent.Text = "₱ " + current.ToString("N2");
                                 lblAvailable.Text = "₱ " + available.ToString("N2");
