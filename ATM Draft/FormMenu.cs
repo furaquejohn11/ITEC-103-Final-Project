@@ -39,10 +39,16 @@ namespace ATM_Draft
         {
             OpenForm(new FormSource(id, "WITHDRAW"));
         }
+        private void btnTransfer_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormSource(id, "TRANSFER"));
+        }
 
         private void btnChangePass_Click(object sender, EventArgs e)
         {
             OpenForm(new FormChangePass(id));
         }
+
+        
     }
 }

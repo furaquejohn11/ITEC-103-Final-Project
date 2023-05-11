@@ -37,6 +37,9 @@ namespace ATM_Draft
                 case "WITHDRAW":
                     OpenForm(new FormWithdraw(id, source));
                     break;
+                case "TRANSFER":
+                    OpenForm(new FormTransfer(id, source));
+                    break;
                 default:
                     break;
             }

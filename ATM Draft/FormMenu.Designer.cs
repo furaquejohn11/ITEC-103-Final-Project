@@ -34,8 +34,8 @@
             this.btnPrepaid = new System.Windows.Forms.Button();
             this.btnPayments = new System.Windows.Forms.Button();
             this.btnWithdraw = new System.Windows.Forms.Button();
-            this.btnFastCash = new System.Windows.Forms.Button();
-            this.btnCredit = new System.Windows.Forms.Button();
+            this.btnDeposit = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btnChangePass = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -68,6 +68,7 @@
             this.btnTransfer.TabIndex = 4;
             this.btnTransfer.Text = "TRANSFER";
             this.btnTransfer.UseVisualStyleBackColor = true;
+            this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
             // 
             // btnPrepaid
             // 
@@ -75,7 +76,7 @@
             this.btnPrepaid.Name = "btnPrepaid";
             this.btnPrepaid.Size = new System.Drawing.Size(211, 55);
             this.btnPrepaid.TabIndex = 5;
-            this.btnPrepaid.Text = "PREPAID AUTO RELOAD";
+            this.btnPrepaid.Text = "UNDECIDED?";
             this.btnPrepaid.UseVisualStyleBackColor = true;
             // 
             // btnPayments
@@ -97,27 +98,27 @@
             this.btnWithdraw.UseVisualStyleBackColor = true;
             this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
             // 
-            // btnFastCash
+            // btnDeposit
             // 
-            this.btnFastCash.Location = new System.Drawing.Point(545, 179);
-            this.btnFastCash.Name = "btnFastCash";
-            this.btnFastCash.Size = new System.Drawing.Size(211, 55);
-            this.btnFastCash.TabIndex = 8;
-            this.btnFastCash.Text = "FAST CASH";
-            this.btnFastCash.UseVisualStyleBackColor = true;
+            this.btnDeposit.Location = new System.Drawing.Point(545, 179);
+            this.btnDeposit.Name = "btnDeposit";
+            this.btnDeposit.Size = new System.Drawing.Size(211, 55);
+            this.btnDeposit.TabIndex = 8;
+            this.btnDeposit.Text = "DEPOSIT";
+            this.btnDeposit.UseVisualStyleBackColor = true;
             // 
-            // btnCredit
+            // btnLogout
             // 
-            this.btnCredit.Location = new System.Drawing.Point(545, 257);
-            this.btnCredit.Name = "btnCredit";
-            this.btnCredit.Size = new System.Drawing.Size(211, 55);
-            this.btnCredit.TabIndex = 9;
-            this.btnCredit.Text = "CREDIT CARD CASH ADVANCE";
-            this.btnCredit.UseVisualStyleBackColor = true;
+            this.btnLogout.Location = new System.Drawing.Point(545, 333);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(211, 55);
+            this.btnLogout.TabIndex = 9;
+            this.btnLogout.Text = "LOGOUT";
+            this.btnLogout.UseVisualStyleBackColor = true;
             // 
             // btnChangePass
             // 
-            this.btnChangePass.Location = new System.Drawing.Point(545, 333);
+            this.btnChangePass.Location = new System.Drawing.Point(545, 257);
             this.btnChangePass.Name = "btnChangePass";
             this.btnChangePass.Size = new System.Drawing.Size(211, 55);
             this.btnChangePass.TabIndex = 10;
@@ -141,8 +142,8 @@
             this.ClientSize = new System.Drawing.Size(870, 517);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnChangePass);
-            this.Controls.Add(this.btnCredit);
-            this.Controls.Add(this.btnFastCash);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnDeposit);
             this.Controls.Add(this.btnWithdraw);
             this.Controls.Add(this.btnPayments);
             this.Controls.Add(this.btnPrepaid);
@@ -166,8 +167,8 @@
         private System.Windows.Forms.Button btnPrepaid;
         private System.Windows.Forms.Button btnPayments;
         private System.Windows.Forms.Button btnWithdraw;
-        private System.Windows.Forms.Button btnFastCash;
-        private System.Windows.Forms.Button btnCredit;
+        private System.Windows.Forms.Button btnDeposit;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnChangePass;
         private System.Windows.Forms.Label label2;
     }
