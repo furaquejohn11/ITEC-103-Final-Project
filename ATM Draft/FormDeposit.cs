@@ -11,34 +11,27 @@ using System.Windows.Forms;
 
 namespace ATM_Draft
 {
-    public partial class FormWithdraw : Form
+    public partial class FormDeposit : Form
     {
         private string id { get; set; }
         private string source { get; set; }
-        public FormWithdraw(string id, string source)
+        public FormDeposit(string id, string source)
         {
             InitializeComponent();
             this.id = id;
             this.source = source;
         }
 
-        private void FormWithdraw_Load(object sender, EventArgs e)
+        private void FormDeposit_Load(object sender, EventArgs e)
         {
-            label3.Text = source;
-        }
 
-        // Cancel button
-        private void button3_Click(object sender, EventArgs e)
-        {
-            var frmMenu = new FormMenu(id);
-            var mainForm = (FormMain)this.ParentForm;
-            FormMain.ShowFormInPanel(frmMenu, mainForm.pnlChildForm);
         }
 
         private async void btnYes_Click(object sender, EventArgs e)
         {
             double amount;
-            if (Double.TryParse(txtAmount.Text, out amount))
+
+            if (Double.TryParse(txtAmount.Text, out amount ))
             {
                 if (CheckValidAmount(amount))
                 {
@@ -53,7 +46,9 @@ namespace ATM_Draft
             {
                 MessageBox.Show("AMOUNT MUST NOT BE EMPTY!");
             }
+           
         }
+
         private bool CheckValidAmount(double amount)
         {
             if (amount % 100 == 0 && amount != 0)
@@ -81,19 +76,12 @@ namespace ATM_Draft
                         {
                             if (reader.Read())
                             {
-                           
+
                                 double balance = Convert.ToDouble(reader[source]);
                                 double amount = Convert.ToDouble(txtAmount.Text);
-              
-                                if (CheckEnoughBalance(balance, amount))
-                                {
-                                    double newBalance = balance - amount;                    
-                                    await UpdateBalance(newBalance, connection);
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Not Enough Balance!");
-                                }
+
+                                double newBalance = balance + amount;
+                                await UpdateBalance(newBalance, connection);
 
                             }
                         }
@@ -105,26 +93,13 @@ namespace ATM_Draft
                 MessageBox.Show("Check Account " + ex.Message);
             }
         }
-        private bool CheckEnoughBalance(double balance, double withdraw)
-        {
-            if (balance <= 500)
-            {
-                return false;
-            }
-
-            if (balance - withdraw <= 500)
-            {
-                return false;
-            }
-
-            return true;
-        }
+        
         private async Task UpdateBalance(double newBalance, SQLiteConnection connection)
         {
             try
             {
                 Database database = new Database();
-                
+
                 string query;
                 if (source == "SAVINGS")
                     query = "UPDATE tblAccounts SET SAVINGS = @SAVINGS WHERE ID = @ID";
@@ -137,14 +112,14 @@ namespace ATM_Draft
 
 
                     if (source == "SAVINGS")
-                        command.Parameters.AddWithValue("@SAVINGS",newBalance);
+                        command.Parameters.AddWithValue("@SAVINGS", newBalance);
                     else
                         command.Parameters.AddWithValue("@CHECKINGS", newBalance);
 
                     await command.ExecuteNonQueryAsync();
 
                     double amount = double.Parse(txtAmount.Text);
-                    MessageBox.Show("You successfully withdraw PHP " + amount.ToString("N2"));
+                    MessageBox.Show("You successfully deposit PHP " + amount.ToString("N2"));
 
                     var frmWelcome = new FormWelcome();
                     frmWelcome.Show();
@@ -153,13 +128,22 @@ namespace ATM_Draft
                     frmMain.Hide();
 
                 }
-                
+
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show("Update Balance " + ex.Message);
             }
+        }
+        private void OpenForm(Form form)
+        {
+            var mainForm = (FormMain)this.ParentForm;
+            FormMain.ShowFormInPanel(form, mainForm.pnlChildForm);
+        }
+        private void btnNo_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormMenu(id));
         }
     }
 }

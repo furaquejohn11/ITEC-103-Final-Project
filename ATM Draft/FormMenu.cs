@@ -43,12 +43,25 @@ namespace ATM_Draft
         {
             OpenForm(new FormSource(id, "TRANSFER"));
         }
-
+        
+        private void btnDeposit_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormSource(id, "DEPOSIT"));
+        }
         private void btnChangePass_Click(object sender, EventArgs e)
         {
             OpenForm(new FormChangePass(id));
         }
 
-        
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you for using BCASH! Press okay to exit. ");
+
+            var frmWelcome = new FormWelcome();
+            frmWelcome.Show();
+
+            var frmMain = (FormMain)this.ParentForm;
+            frmMain.Hide();
+        }
     }
 }

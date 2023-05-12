@@ -106,6 +106,7 @@
             this.btnDeposit.TabIndex = 8;
             this.btnDeposit.Text = "DEPOSIT";
             this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // btnLogout
             // 
@@ -115,6 +116,7 @@
             this.btnLogout.TabIndex = 9;
             this.btnLogout.Text = "LOGOUT";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnChangePass
             // 

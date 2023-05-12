@@ -25,26 +25,42 @@ namespace ATM_Draft
         }
         private async void btnYes_Click(object sender, EventArgs e)
         {
-            if (CheckValidAmount(Convert.ToDouble(txtAmount.Text)))
+            double amount;
+
+            if (Double.TryParse(txtAmount.Text, out amount))
             {
-                await DeductOnOwnAccount();
+                if (CheckValidAmount(amount))
+                {
+                    await DeductOnOwnAccount();
+                }
+                else
+                {
+                    MessageBox.Show("INVALID AMOUNT!");
+                }
             }
             else
             {
-                MessageBox.Show("INVALID AMOUNT!");
+                MessageBox.Show("AMOUNT MUST NOT BE EMPTY!");
             }
         }
         private bool CheckValidAmount(double amount)
         {
-            if (amount % 100 == 0)
+            if (amount % 100 == 0 && amount != 0)
             {
                 return true;
             }
             return false;
         }
+
+        private void OpenForm(Form form)
+        {
+            var mainForm = (FormMain)this.ParentForm;
+            FormMain.ShowFormInPanel(form, mainForm.pnlChildForm);
+        }
+
         private void btnNo_Click(object sender, EventArgs e)
         {
-
+            OpenForm(new FormMenu(id));
         }
         private bool CheckEnoughBalance(double balance, double withdraw)
         {

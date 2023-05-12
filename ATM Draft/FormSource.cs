@@ -40,6 +40,9 @@ namespace ATM_Draft
                 case "TRANSFER":
                     OpenForm(new FormTransfer(id, source));
                     break;
+                case "DEPOSIT":
+                    OpenForm(new FormDeposit(id, source));
+                    break;
                 default:
                     break;
             }
