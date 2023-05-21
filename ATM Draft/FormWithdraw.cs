@@ -146,6 +146,9 @@ namespace ATM_Draft
                     double amount = double.Parse(txtAmount.Text);
                     MessageBox.Show("You successfully withdraw PHP " + amount.ToString("N2"));
 
+                    var historyRecord = new HistoryRecord(id, connection);
+                    await historyRecord.UpdateSavings(amount, "DEDUCTED", newBalance);
+
                     var frmWelcome = new FormWelcome();
                     frmWelcome.Show();
 
