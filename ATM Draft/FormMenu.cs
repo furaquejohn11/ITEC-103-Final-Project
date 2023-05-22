@@ -48,10 +48,18 @@ namespace ATM_Draft
         {
             OpenForm(new FormSource(id, "DEPOSIT"));
         }
+
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormSource(id, "PAYMENTS"));
+        }
+
         private void btnChangePass_Click(object sender, EventArgs e)
         {
             OpenForm(new FormChangePass(id));
         }
+
+        
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -63,5 +71,7 @@ namespace ATM_Draft
             var frmMain = (FormMain)this.ParentForm;
             frmMain.Hide();
         }
+
+        
     }
 }

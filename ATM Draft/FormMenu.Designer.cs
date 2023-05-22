@@ -87,6 +87,7 @@
             this.btnPayments.TabIndex = 6;
             this.btnPayments.Text = "PAYMENTS";
             this.btnPayments.UseVisualStyleBackColor = true;
+            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
             // btnWithdraw
             // 

@@ -52,3 +52,4 @@ C:\Users\John Patrick\Desktop\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormSource
 C:\Users\John Patrick\Desktop\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormTransfer.resources
 C:\Users\John Patrick\Desktop\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormTransferAmount.resources
 C:\Users\John Patrick\Desktop\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormDeposit.resources
+C:\Users\John Patrick\Desktop\ATM Draft\ATM Draft\obj\Debug\ATM_Draft.FormPayments.resources
