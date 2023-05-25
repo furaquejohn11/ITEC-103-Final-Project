@@ -34,6 +34,7 @@
             this.TRANSACTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BALANCE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgPayments)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             this.BALANCE});
             this.dvgPayments.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dvgPayments.EnableHeadersVisualStyles = false;
-            this.dvgPayments.Location = new System.Drawing.Point(71, 36);
+            this.dvgPayments.Location = new System.Drawing.Point(57, 55);
             this.dvgPayments.Name = "dvgPayments";
             this.dvgPayments.ReadOnly = true;
             this.dvgPayments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -95,11 +96,22 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(340, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(209, 25);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "LAST 30 HISTORY";
+            // 
             // FormPayments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 517);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.dvgPayments);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -108,6 +120,7 @@
             this.Load += new System.EventHandler(this.FormPayments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgPayments)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -119,5 +132,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TRANSACTION;
         private System.Windows.Forms.DataGridViewTextBoxColumn BALANCE;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -102,12 +102,33 @@ namespace ATM_Draft
 
                                 if (CheckEnoughBalance(balance, amount))
                                 {
+                                    // UPDATE SENDER ACCOUNT
                                     double newBalance = balance - amount;
                                     await UpdateOwnAccount(newBalance, connection);
+                                    var historyRecord = new HistoryRecord(id, connection);
+                                    if (source == "SAVINGS")
+                                    {
+                                        await historyRecord.UpdateSavings(amount, "SENT TO " + receiverID , newBalance);
+                                    }
+                                    else
+                                    {
+                                        await historyRecord.UpdateCheckings(amount, "SENT TO " + receiverID, newBalance);
+                                    }
 
 
+                                    // UPDATE RECEIVER ACCOUNT
                                     double receiverNewBalance = await GetReceiverBalance(connection) + amount;
                                     await TransferMoney(receiverNewBalance, connection);
+
+                                    var receiverHistoryRecord = new HistoryRecord(receiverID, connection);
+                                    if (source == "SAVINGS")
+                                    {
+                                        await receiverHistoryRecord.UpdateSavings(amount, "RECEIVED FROM " + id, receiverNewBalance);
+                                    }
+                                    else
+                                    {
+                                        await receiverHistoryRecord.UpdateCheckings(amount, "RECEIVED FROM " + id, receiverNewBalance);
+                                    }
 
 
                                 }
@@ -176,7 +197,9 @@ namespace ATM_Draft
                     else
                         command.Parameters.AddWithValue("@CHECKINGS", newBalance);
 
-                    await command.ExecuteNonQueryAsync();       
+                    await command.ExecuteNonQueryAsync();    
+                    
+                    
                   
                 }
 

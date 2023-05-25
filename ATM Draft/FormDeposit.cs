@@ -121,6 +121,16 @@ namespace ATM_Draft
                     double amount = double.Parse(txtAmount.Text);
                     MessageBox.Show("You successfully deposit PHP " + amount.ToString("N2"));
 
+                    var historyRecord = new HistoryRecord(id, connection);
+                    if (source == "SAVINGS")
+                    {
+                        await historyRecord.UpdateSavings(amount, "DEPOSIT", newBalance);
+                    }
+                    else
+                    {
+                        await historyRecord.UpdateCheckings(amount, "DEPOSIT", newBalance);
+                    }
+
                     var frmWelcome = new FormWelcome();
                     frmWelcome.Show();
 

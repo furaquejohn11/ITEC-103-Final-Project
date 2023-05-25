@@ -85,7 +85,7 @@
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.Size = new System.Drawing.Size(211, 55);
             this.btnPayments.TabIndex = 6;
-            this.btnPayments.Text = "PAYMENTS";
+            this.btnPayments.Text = "HISTORY";
             this.btnPayments.UseVisualStyleBackColor = true;
             this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 

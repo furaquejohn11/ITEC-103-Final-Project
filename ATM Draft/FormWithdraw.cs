@@ -137,7 +137,7 @@ namespace ATM_Draft
 
 
                     if (source == "SAVINGS")
-                        command.Parameters.AddWithValue("@SAVINGS",newBalance);
+                        command.Parameters.AddWithValue("@SAVINGS", newBalance);
                     else
                         command.Parameters.AddWithValue("@CHECKINGS", newBalance);
 
@@ -147,7 +147,14 @@ namespace ATM_Draft
                     MessageBox.Show("You successfully withdraw PHP " + amount.ToString("N2"));
 
                     var historyRecord = new HistoryRecord(id, connection);
-                    await historyRecord.UpdateSavings(amount, "DEDUCTED", newBalance);
+                    if (source == "SAVINGS")
+                    { 
+                        await historyRecord.UpdateSavings(amount, "WITHDRAW", newBalance);
+                    }
+                    else
+                    {
+                        await historyRecord.UpdateCheckings(amount, "WITHDRAW", newBalance);
+                    }
 
                     var frmWelcome = new FormWelcome();
                     frmWelcome.Show();

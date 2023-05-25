@@ -36,7 +36,7 @@ namespace ATM_Draft
                 {
                     await connection.OpenAsync();
 
-                    string query = "SELECT * FROM tblHistory WHERE ID = @ID AND SOURCE = @SOURCE ORDER BY DATE_TIME DESC";
+                    string query = "SELECT * FROM tblHistory WHERE ID = @ID AND SOURCE = @SOURCE ORDER BY DATE_TIME DESC LIMIT 30";
 
                     using (var command = new SQLiteCommand(query, connection))
                     {

@@ -49,6 +49,8 @@ namespace ATM_Draft
             OpenForm(new FormSource(id, "DEPOSIT"));
         }
 
+
+        // THIS IS HISTORY BUTTON
         private void btnPayments_Click(object sender, EventArgs e)
         {
             OpenForm(new FormSource(id, "PAYMENTS"));
