@@ -74,7 +74,7 @@
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PromptChar = ' ';
             this.txtAmount.Size = new System.Drawing.Size(258, 31);
-            this.txtAmount.TabIndex = 11;
+            this.txtAmount.TabIndex = 1;
             this.txtAmount.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtAmount.ValidatingType = typeof(int);
             // 

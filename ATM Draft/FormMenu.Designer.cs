@@ -37,7 +37,6 @@
             this.btnDeposit = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnChangePass = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBalance
@@ -72,7 +71,7 @@
             // 
             // btnPrepaid
             // 
-            this.btnPrepaid.Location = new System.Drawing.Point(114, 257);
+            this.btnPrepaid.Location = new System.Drawing.Point(114, 338);
             this.btnPrepaid.Name = "btnPrepaid";
             this.btnPrepaid.Size = new System.Drawing.Size(211, 55);
             this.btnPrepaid.TabIndex = 5;
@@ -81,7 +80,7 @@
             // 
             // btnPayments
             // 
-            this.btnPayments.Location = new System.Drawing.Point(114, 333);
+            this.btnPayments.Location = new System.Drawing.Point(114, 257);
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.Size = new System.Drawing.Size(211, 55);
             this.btnPayments.TabIndex = 6;
@@ -111,7 +110,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(545, 333);
+            this.btnLogout.Location = new System.Drawing.Point(545, 338);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(211, 55);
             this.btnLogout.TabIndex = 9;
@@ -129,21 +128,11 @@
             this.btnChangePass.UseVisualStyleBackColor = true;
             this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(424, 431);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "label2";
-            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 517);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnChangePass);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnDeposit);
@@ -173,6 +162,5 @@
         private System.Windows.Forms.Button btnDeposit;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnChangePass;
-        private System.Windows.Forms.Label label2;
     }
 }

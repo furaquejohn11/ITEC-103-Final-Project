@@ -21,7 +21,7 @@ namespace ATM_Draft
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            label2.Text = id;
+            
         }
 
         private void OpenForm(Form form)

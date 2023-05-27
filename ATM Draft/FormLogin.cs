@@ -49,8 +49,52 @@ namespace ATM_Draft
             else
             {
                 numOfTries--;
-                MessageBox.Show("WRONG PASSWORD TRY AGAIN! " + numOfTries + " left!");
+                if (numOfTries <= 0)
+                {
+                    await DisableAccount();
+                }
+                else
+                {
+                    MessageBox.Show("WRONG PASSWORD TRY AGAIN! " + numOfTries + " left!");
+                }
+                
                 mtxtPIN.Clear();
+            }
+        }
+        private async Task DisableAccount()
+        {
+            
+
+            try
+            {
+                var database = new Database();
+                using (var connection = new SQLiteConnection(database.strConnection))
+                {
+                    await connection.OpenAsync();
+
+                    string query = "UPDATE tblAccounts SET STATUS = @STATUS WHERE ID = @ID";
+
+                    using (var command = new SQLiteCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ID", id);
+                        command.Parameters.AddWithValue("@STATUS", "BLOCKED");
+
+                        await command.ExecuteNonQueryAsync();
+
+                        MessageBox.Show("YOUR ACCOUNT IS CURRENTLY BLOCKED");
+
+                        var frmWelcome = new FormWelcome();
+                        frmWelcome.Show();
+
+                        this.Hide();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private async Task<bool> CheckAccount()
@@ -85,6 +129,14 @@ namespace ATM_Draft
         private void mtxtPIN_Enter(object sender, EventArgs e)
         {
             mtxtPIN.SelectionStart = 0;
+        }
+
+        private void mtxtPIN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                Submit();
+            }
         }
     }
 }

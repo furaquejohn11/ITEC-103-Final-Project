@@ -78,6 +78,12 @@
     <Compile Include="FormChangePass.Designer.cs">
       <DependentUpon>FormChangePass.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCreateAccout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateAccout.Designer.cs">
+      <DependentUpon>FormCreateAccout.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDeposit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChangePass.resx">
       <DependentUpon>FormChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateAccout.resx">
+      <DependentUpon>FormCreateAccout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDeposit.resx">
       <DependentUpon>FormDeposit.cs</DependentUpon>

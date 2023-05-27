@@ -46,6 +46,7 @@
             this.mtxtPIN.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.mtxtPIN.ValidatingType = typeof(int);
             this.mtxtPIN.Enter += new System.EventHandler(this.mtxtPIN_Enter);
+            this.mtxtPIN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtPIN_KeyPress);
             // 
             // label1
             // 

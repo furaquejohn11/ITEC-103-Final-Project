@@ -26,22 +26,16 @@ namespace ATM_Draft
 
         private async void btnSubmit_Click(object sender, EventArgs e)
         {
-            bool isValid = await CheckID();
-
-            if (isValid)
-            {
-                id = txtBoxID.Text;
-                var frmLogin = new FormLogin(id);
-                frmLogin.Show();
-                this.Hide();
-
-            }
-            else
-            {
-                MessageBox.Show("ID NOT AVAILABLE!");
-            }
+            await Login();
         }
-        private async Task<bool> CheckID()
+        private async Task Login()
+        {
+            await CheckID();
+              
+            
+        }
+
+        private async Task CheckID()
         {
             try
             {
@@ -57,7 +51,27 @@ namespace ATM_Draft
                         command.Parameters.AddWithValue("@ID", txtBoxID.Text);
                         using (var reader = await command.ExecuteReaderAsync()) 
                         {
-                            return reader.Read();
+                            if (reader.Read())
+                            {
+                                if (reader["STATUS"].ToString() == "ACTIVE")
+                                {
+                                    id = txtBoxID.Text;
+                                    var frmLogin = new FormLogin(id);
+                                    frmLogin.Show();
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("YOUR ACCOUNT IS CURRENTLY BLOCKED");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("ID NOT AVAILABLE!", "ID NOT FOUND", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+
+                            
                         }
                     }
                 }
@@ -65,10 +79,22 @@ namespace ATM_Draft
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return false;
+                
             }
         }
 
-        
+        private async void txtBoxID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                await Login();
+            }
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            var create = new FormCreateAccout();
+            create.ShowDialog();
+        }
     }
 }

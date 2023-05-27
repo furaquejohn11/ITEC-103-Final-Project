@@ -45,7 +45,7 @@ namespace ATM_Draft
         }
         private bool CheckValidAmount(double amount)
         {
-            if (amount % 100 == 0 && amount != 0)
+            if (amount % 100 == 0 && amount != 0 && amount == 10000)
             {
                 return true;
             }
