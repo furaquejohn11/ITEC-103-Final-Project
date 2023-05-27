@@ -44,6 +44,7 @@
             this.mtxtPIN.Size = new System.Drawing.Size(206, 44);
             this.mtxtPIN.TabIndex = 0;
             this.mtxtPIN.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtxtPIN.UseSystemPasswordChar = true;
             this.mtxtPIN.ValidatingType = typeof(int);
             this.mtxtPIN.Enter += new System.EventHandler(this.mtxtPIN_Enter);
             this.mtxtPIN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtPIN_KeyPress);

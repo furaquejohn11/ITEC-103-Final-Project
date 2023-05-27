@@ -22,18 +22,7 @@ namespace ATM_Draft
             InitializeComponent();
         }
 
-        private void FormWelcome_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-            if (videoCaptureDevice.IsRunning)
-            {
-                videoCaptureDevice.Stop();
-            }
-
-            Application.Exit();
-
-           
-        }
+       
 
         private async void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -68,6 +57,10 @@ namespace ATM_Draft
                                 {
                                     id = username;
                                     var frmLogin = new FormLogin(id);
+                              
+
+                                    videoCaptureDevice.Stop();
+                                    timer1.Stop();
                                     frmLogin.Show();
                                     this.Hide();
                                 }
@@ -118,6 +111,15 @@ namespace ATM_Draft
         private void FormWelcome_Load(object sender, EventArgs e)
         {
             panel1.Visible = false;
+
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filter in filterInfoCollection)
+            {
+                comboBox1.Items.Add(filter.Name);
+            }
+            comboBox1.SelectedIndex = 0;
+
+
         }
 
         private void btnScanner_Click(object sender, EventArgs e)
@@ -152,14 +154,27 @@ namespace ATM_Draft
 
         private void btnQR_Click(object sender, EventArgs e)
         {
-            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo filter in filterInfoCollection)
-            {
-                comboBox1.Items.Add(filter.Name);
-            }
-            comboBox1.SelectedIndex = 0;
+            
 
             panel1.Visible = true;
+        }
+
+        private void FormWelcome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (videoCaptureDevice != null && videoCaptureDevice.IsRunning)
+            {
+                videoCaptureDevice.SignalToStop();
+                videoCaptureDevice.WaitForStop();
+                videoCaptureDevice = null;
+            }
+
+            timer1.Stop();
+            Application.Exit();
+
+
+
+
+
         }
     }
 }
