@@ -31,11 +31,9 @@
             this.btnBalance = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTransfer = new System.Windows.Forms.Button();
-            this.btnPrepaid = new System.Windows.Forms.Button();
             this.btnPayments = new System.Windows.Forms.Button();
             this.btnWithdraw = new System.Windows.Forms.Button();
             this.btnDeposit = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.btnChangePass = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -69,15 +67,6 @@
             this.btnTransfer.UseVisualStyleBackColor = true;
             this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
             // 
-            // btnPrepaid
-            // 
-            this.btnPrepaid.Location = new System.Drawing.Point(114, 338);
-            this.btnPrepaid.Name = "btnPrepaid";
-            this.btnPrepaid.Size = new System.Drawing.Size(211, 55);
-            this.btnPrepaid.TabIndex = 5;
-            this.btnPrepaid.Text = "UNDECIDED?";
-            this.btnPrepaid.UseVisualStyleBackColor = true;
-            // 
             // btnPayments
             // 
             this.btnPayments.Location = new System.Drawing.Point(114, 257);
@@ -108,23 +97,13 @@
             this.btnDeposit.UseVisualStyleBackColor = true;
             this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(545, 338);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(211, 55);
-            this.btnLogout.TabIndex = 9;
-            this.btnLogout.Text = "LOGOUT";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
             // btnChangePass
             // 
             this.btnChangePass.Location = new System.Drawing.Point(545, 257);
             this.btnChangePass.Name = "btnChangePass";
             this.btnChangePass.Size = new System.Drawing.Size(211, 55);
             this.btnChangePass.TabIndex = 10;
-            this.btnChangePass.Text = "CHANGE PASSWORD";
+            this.btnChangePass.Text = "ACCOUNT";
             this.btnChangePass.UseVisualStyleBackColor = true;
             this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
@@ -134,11 +113,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 517);
             this.Controls.Add(this.btnChangePass);
-            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnDeposit);
             this.Controls.Add(this.btnWithdraw);
             this.Controls.Add(this.btnPayments);
-            this.Controls.Add(this.btnPrepaid);
             this.Controls.Add(this.btnTransfer);
             this.Controls.Add(this.btnBalance);
             this.Controls.Add(this.label1);
@@ -156,11 +133,9 @@
         private System.Windows.Forms.Button btnBalance;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTransfer;
-        private System.Windows.Forms.Button btnPrepaid;
         private System.Windows.Forms.Button btnPayments;
         private System.Windows.Forms.Button btnWithdraw;
         private System.Windows.Forms.Button btnDeposit;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnChangePass;
     }
 }

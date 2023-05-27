@@ -35,9 +35,9 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnScanner = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnScanner = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnQR = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -103,13 +103,13 @@
             this.panel1.Size = new System.Drawing.Size(784, 349);
             this.panel1.TabIndex = 7;
             // 
-            // comboBox1
+            // pictureBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(214, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.pictureBox1.Location = new System.Drawing.Point(31, 71);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(475, 275);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // btnScanner
             // 
@@ -121,13 +121,13 @@
             this.btnScanner.UseVisualStyleBackColor = true;
             this.btnScanner.Click += new System.EventHandler(this.btnScanner_Click);
             // 
-            // pictureBox1
+            // comboBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(31, 71);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(475, 275);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(214, 20);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 0;
             // 
             // timer1
             // 

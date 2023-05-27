@@ -106,5 +106,16 @@ namespace ATM_Draft
             var mainForm = (FormMain)this.ParentForm;
             FormMain.ShowFormInPanel(frmMenu, mainForm.pnlChildForm);
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you for using BCASH! Press okay to exit. ");
+
+            var frmWelcome = new FormWelcome();
+            frmWelcome.Show();
+
+            var frmMain = (FormMain)this.ParentForm;
+            frmMain.Hide();
+        }
     }
 }

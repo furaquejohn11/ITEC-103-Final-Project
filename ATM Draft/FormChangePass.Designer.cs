@@ -37,6 +37,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtConfirm = new System.Windows.Forms.MaskedTextBox();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -95,7 +96,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(694, 378);
+            this.btnSubmit.Location = new System.Drawing.Point(691, 338);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(137, 41);
             this.btnSubmit.TabIndex = 12;
@@ -105,7 +106,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(694, 440);
+            this.btnCancel.Location = new System.Drawing.Point(691, 385);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 41);
             this.btnCancel.TabIndex = 13;
@@ -135,11 +136,22 @@
             this.txtConfirm.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtConfirm.ValidatingType = typeof(int);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(691, 432);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(137, 41);
+            this.btnLogout.TabIndex = 16;
+            this.btnLogout.Text = "LOGOUT";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // FormChangePass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 517);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.txtConfirm);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCancel);
@@ -168,5 +180,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox txtConfirm;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
