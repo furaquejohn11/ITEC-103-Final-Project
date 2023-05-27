@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using ZXing;
+using AForge.Video;
+using AForge.Video.DirectShow;
 
 namespace ATM_Draft
 {
@@ -21,7 +24,15 @@ namespace ATM_Draft
 
         private void FormWelcome_FormClosing(object sender, FormClosingEventArgs e)
         {
+
+            if (videoCaptureDevice.IsRunning)
+            {
+                videoCaptureDevice.Stop();
+            }
+
             Application.Exit();
+
+           
         }
 
         private async void btnSubmit_Click(object sender, EventArgs e)
@@ -30,12 +41,12 @@ namespace ATM_Draft
         }
         private async Task Login()
         {
-            await CheckID();
+            await CheckID(txtBoxID.Text);
               
             
         }
 
-        private async Task CheckID()
+        private async Task CheckID(string username)
         {
             try
             {
@@ -48,14 +59,14 @@ namespace ATM_Draft
 
                     using (var command = new SQLiteCommand(query, connection)) 
                     {
-                        command.Parameters.AddWithValue("@ID", txtBoxID.Text);
+                        command.Parameters.AddWithValue("@ID", username);
                         using (var reader = await command.ExecuteReaderAsync()) 
                         {
                             if (reader.Read())
                             {
                                 if (reader["STATUS"].ToString() == "ACTIVE")
                                 {
-                                    id = txtBoxID.Text;
+                                    id = username;
                                     var frmLogin = new FormLogin(id);
                                     frmLogin.Show();
                                     this.Hide();
@@ -95,6 +106,60 @@ namespace ATM_Draft
         {
             var create = new FormCreateAccout();
             create.ShowDialog();
+        }
+
+
+
+        // QR SCANNER CODE
+
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice videoCaptureDevice;
+
+        private void FormWelcome_Load(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
+        private void btnScanner_Click(object sender, EventArgs e)
+        {
+            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[comboBox1.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += videoCaptureDevice_NewFrame;
+            videoCaptureDevice.Start();
+            timer1.Start();
+        }
+
+        private void videoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            pictureBox1.Image = bitmap;
+
+
+        }
+
+        private async void timer1_Tick(object sender, EventArgs e)
+        {
+            if (pictureBox1 != null && pictureBox1.Image != null)
+            {
+                BarcodeReader reader = new BarcodeReader();
+                Result result = reader.Decode((Bitmap)pictureBox1.Image);
+
+                if (result != null)
+                {
+                    await CheckID(result.Text);
+                }
+            }
+        }
+
+        private void btnQR_Click(object sender, EventArgs e)
+        {
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filter in filterInfoCollection)
+            {
+                comboBox1.Items.Add(filter.Name);
+            }
+            comboBox1.SelectedIndex = 0;
+
+            panel1.Visible = true;
         }
     }
 }
