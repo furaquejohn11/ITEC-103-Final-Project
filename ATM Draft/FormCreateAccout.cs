@@ -109,5 +109,10 @@ namespace ATM_Draft
                 return false;
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

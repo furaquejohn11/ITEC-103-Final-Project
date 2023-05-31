@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSource));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCheckings = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSavings = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbSaving = new System.Windows.Forms.PictureBox();
+            this.pbCheck = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSaving)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheck)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -63,9 +66,12 @@
             this.btnCheckings.Text = "CHECKINGS (CA)";
             this.btnCheckings.UseVisualStyleBackColor = false;
             this.btnCheckings.Click += new System.EventHandler(this.btnCheckings_Click);
+            this.btnCheckings.MouseLeave += new System.EventHandler(this.btnCheckings_MouseLeave);
+            this.btnCheckings.MouseHover += new System.EventHandler(this.btnCheckings_MouseHover);
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
             this.label1.Location = new System.Drawing.Point(99, 34);
@@ -88,22 +94,40 @@
             this.btnSavings.Text = "SAVINGS";
             this.btnSavings.UseVisualStyleBackColor = false;
             this.btnSavings.Click += new System.EventHandler(this.btnSavings_Click);
+            this.btnSavings.MouseLeave += new System.EventHandler(this.btnSavings_MouseLeave);
+            this.btnSavings.MouseHover += new System.EventHandler(this.btnSavings_MouseHover);
             // 
-            // pictureBox1
+            // pbSaving
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(89, 225);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(339, 213);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.pbSaving.BackColor = System.Drawing.Color.Transparent;
+            this.pbSaving.Image = ((System.Drawing.Image)(resources.GetObject("pbSaving.Image")));
+            this.pbSaving.Location = new System.Drawing.Point(106, 189);
+            this.pbSaving.Name = "pbSaving";
+            this.pbSaving.Size = new System.Drawing.Size(299, 280);
+            this.pbSaving.TabIndex = 13;
+            this.pbSaving.TabStop = false;
+            this.pbSaving.Visible = false;
+            // 
+            // pbCheck
+            // 
+            this.pbCheck.BackColor = System.Drawing.Color.Transparent;
+            this.pbCheck.Image = ((System.Drawing.Image)(resources.GetObject("pbCheck.Image")));
+            this.pbCheck.Location = new System.Drawing.Point(136, 187);
+            this.pbCheck.Name = "pbCheck";
+            this.pbCheck.Size = new System.Drawing.Size(241, 282);
+            this.pbCheck.TabIndex = 14;
+            this.pbCheck.TabStop = false;
+            this.pbCheck.Visible = false;
             // 
             // FormSource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(870, 517);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbCheck);
+            this.Controls.Add(this.pbSaving);
             this.Controls.Add(this.btnSavings);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCheckings);
@@ -111,7 +135,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSource";
             this.Text = "FormSource";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSaving)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCheck)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,6 +147,7 @@
         private System.Windows.Forms.Button btnCheckings;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSavings;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbSaving;
+        private System.Windows.Forms.PictureBox pbCheck;
     }
 }

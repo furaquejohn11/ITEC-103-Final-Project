@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>BCASHLOGO1.ico</ApplicationIcon>
+    <ApplicationIcon>bcashlogo-1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -239,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bcashIT-icon.ico" />
+    <Content Include="bcashlogo-1.ico" />
     <Content Include="BCASHLOGO1.ico" />
     <Content Include="BCASHLOGO2.ico" />
     <Content Include="Untitled-1.ico" />
