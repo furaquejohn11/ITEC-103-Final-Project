@@ -38,10 +38,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
             this.label1.Location = new System.Drawing.Point(171, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(510, 25);
+            this.label1.Size = new System.Drawing.Size(638, 37);
             this.label1.TabIndex = 9;
             this.label1.Text = "ENTER THE USERNAME YOU WANT TO SEND";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -56,31 +57,40 @@
             // 
             // btnYes
             // 
+            this.btnYes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
+            this.btnYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYes.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnYes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
             this.btnYes.Location = new System.Drawing.Point(629, 349);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(211, 55);
             this.btnYes.TabIndex = 12;
             this.btnYes.Text = "YES";
-            this.btnYes.UseVisualStyleBackColor = true;
+            this.btnYes.UseVisualStyleBackColor = false;
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
             // btnNo
             // 
+            this.btnNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
+            this.btnNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNo.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
             this.btnNo.Location = new System.Drawing.Point(629, 421);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(211, 55);
             this.btnNo.TabIndex = 11;
             this.btnNo.Text = "NO";
-            this.btnNo.UseVisualStyleBackColor = true;
+            this.btnNo.UseVisualStyleBackColor = false;
             this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Hamlin", 15.75F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
             this.label2.Location = new System.Drawing.Point(22, 275);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 25);
+            this.label2.Size = new System.Drawing.Size(201, 33);
             this.label2.TabIndex = 13;
             this.label2.Text = "PLEASE CONFIRM";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -89,6 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
             this.ClientSize = new System.Drawing.Size(870, 517);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnYes);
