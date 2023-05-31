@@ -24,7 +24,7 @@ namespace ATM_Draft
 
         private void FormWithdraw_Load(object sender, EventArgs e)
         {
-            label3.Text = source;
+            
         }
 
         // Cancel button

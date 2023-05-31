@@ -36,48 +36,62 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
             this.btnCancel.Location = new System.Drawing.Point(587, 383);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(211, 55);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "CANCEL";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCheckings
             // 
+            this.btnCheckings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
+            this.btnCheckings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckings.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCheckings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
             this.btnCheckings.Location = new System.Drawing.Point(587, 309);
             this.btnCheckings.Name = "btnCheckings";
             this.btnCheckings.Size = new System.Drawing.Size(211, 55);
             this.btnCheckings.TabIndex = 10;
             this.btnCheckings.Text = "CHECKINGS (CA)";
-            this.btnCheckings.UseVisualStyleBackColor = true;
+            this.btnCheckings.UseVisualStyleBackColor = false;
             this.btnCheckings.Click += new System.EventHandler(this.btnCheckings_Click);
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
             this.label1.Location = new System.Drawing.Point(99, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(630, 67);
+            this.label1.Size = new System.Drawing.Size(630, 92);
             this.label1.TabIndex = 8;
             this.label1.Text = "PLEASE PRESS THE PROPER KEY  FOR YOUR DESIRED SOURCE OF ACCOUNT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnSavings
             // 
+            this.btnSavings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
+            this.btnSavings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSavings.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSavings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
             this.btnSavings.Location = new System.Drawing.Point(587, 234);
             this.btnSavings.Name = "btnSavings";
             this.btnSavings.Size = new System.Drawing.Size(211, 55);
             this.btnSavings.TabIndex = 12;
             this.btnSavings.Text = "SAVINGS";
-            this.btnSavings.UseVisualStyleBackColor = true;
+            this.btnSavings.UseVisualStyleBackColor = false;
             this.btnSavings.Click += new System.EventHandler(this.btnSavings_Click);
             // 
             // FormSource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
             this.ClientSize = new System.Drawing.Size(870, 517);
             this.Controls.Add(this.btnSavings);
             this.Controls.Add(this.btnCancel);

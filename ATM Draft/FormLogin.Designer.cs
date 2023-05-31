@@ -31,17 +31,16 @@
             this.mtxtPIN = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEnter = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // mtxtPIN
             // 
-            this.mtxtPIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtPIN.Location = new System.Drawing.Point(254, 203);
+            this.mtxtPIN.Font = new System.Drawing.Font("Hamlin", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtPIN.Location = new System.Drawing.Point(124, 221);
             this.mtxtPIN.Mask = "000000";
             this.mtxtPIN.Name = "mtxtPIN";
             this.mtxtPIN.PromptChar = ' ';
-            this.mtxtPIN.Size = new System.Drawing.Size(206, 44);
+            this.mtxtPIN.Size = new System.Drawing.Size(391, 54);
             this.mtxtPIN.TabIndex = 0;
             this.mtxtPIN.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.mtxtPIN.UseSystemPasswordChar = true;
@@ -52,38 +51,34 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(273, 145);
+            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 35F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
+            this.label1.Location = new System.Drawing.Point(226, 153);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 37);
+            this.label1.Size = new System.Drawing.Size(290, 65);
             this.label1.TabIndex = 1;
             this.label1.Text = "ENTER PIN";
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(401, 276);
+            this.btnEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
+            this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnter.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.btnEnter.Location = new System.Drawing.Point(521, 221);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(75, 23);
+            this.btnEnter.Size = new System.Drawing.Size(97, 54);
             this.btnEnter.TabIndex = 2;
             this.btnEnter.Text = "ENTER";
-            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.UseVisualStyleBackColor = false;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(254, 317);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
             this.ClientSize = new System.Drawing.Size(743, 496);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mtxtPIN);
@@ -102,7 +97,6 @@
         private System.Windows.Forms.MaskedTextBox mtxtPIN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEnter;
-        private System.Windows.Forms.Label label2;
     }
 }
 

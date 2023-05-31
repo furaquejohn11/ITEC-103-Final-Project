@@ -59,7 +59,7 @@ namespace ATM_Draft
                                     var frmLogin = new FormLogin(id);
                               
 
-                                    videoCaptureDevice.Stop();
+                                    //videoCaptureDevice.Stop();
                                     timer1.Stop();
                                     frmLogin.Show();
                                     this.Hide();
@@ -124,10 +124,12 @@ namespace ATM_Draft
 
         private void btnScanner_Click(object sender, EventArgs e)
         {
-            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[comboBox1.SelectedIndex].MonikerString);
-            videoCaptureDevice.NewFrame += videoCaptureDevice_NewFrame;
-            videoCaptureDevice.Start();
-            timer1.Start();
+            //Sinama ko na sa btnQR kaya di na ito need
+
+            //videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[comboBox1.SelectedIndex].MonikerString);
+            //videoCaptureDevice.NewFrame += videoCaptureDevice_NewFrame;
+            //videoCaptureDevice.Start();
+            //timer1.Start();
         }
 
         private void videoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -154,9 +156,11 @@ namespace ATM_Draft
 
         private void btnQR_Click(object sender, EventArgs e)
         {
-            
-
             panel1.Visible = true;
+            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[comboBox1.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += videoCaptureDevice_NewFrame;
+            videoCaptureDevice.Start();
+            timer1.Start();
         }
 
         private void FormWelcome_FormClosing(object sender, FormClosingEventArgs e)

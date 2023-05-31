@@ -54,7 +54,7 @@
             this.BALANCE});
             this.dvgPayments.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dvgPayments.EnableHeadersVisualStyles = false;
-            this.dvgPayments.Location = new System.Drawing.Point(57, 55);
+            this.dvgPayments.Location = new System.Drawing.Point(66, 55);
             this.dvgPayments.Name = "dvgPayments";
             this.dvgPayments.ReadOnly = true;
             this.dvgPayments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -88,7 +88,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(692, 443);
+            this.btnCancel.Location = new System.Drawing.Point(687, 443);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(117, 42);
             this.btnCancel.TabIndex = 1;

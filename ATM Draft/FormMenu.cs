@@ -12,6 +12,7 @@ namespace ATM_Draft
 {
     public partial class FormMenu : Form
     {
+
         private string id { get; set; }
         public FormMenu(string id)
         {
@@ -21,7 +22,7 @@ namespace ATM_Draft
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            
+            this.BackColor = Color.FromArgb(92, 219, 149);
         }
 
         private void OpenForm(Form form)
