@@ -36,6 +36,7 @@
             // 
             // mtxtPIN
             // 
+            this.mtxtPIN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
             this.mtxtPIN.Font = new System.Drawing.Font("Hamlin", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtPIN.Location = new System.Drawing.Point(124, 221);
             this.mtxtPIN.Mask = "000000";
@@ -52,9 +53,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 35F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
-            this.label1.Location = new System.Drawing.Point(226, 153);
+            this.label1.Location = new System.Drawing.Point(226, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(290, 65);
             this.label1.TabIndex = 1;
@@ -79,6 +81,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(743, 496);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.label1);

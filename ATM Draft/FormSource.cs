@@ -66,6 +66,24 @@ namespace ATM_Draft
             OpenForm(new FormMenu(id));
         }
 
-        
+        private void btnSavings_MouseHover(object sender, EventArgs e)
+        {
+            pbSaving.Visible = true;
+        }
+
+        private void btnCheckings_MouseHover(object sender, EventArgs e)
+        {
+            pbCheck.Visible = true;
+        }
+
+        private void btnSavings_MouseLeave(object sender, EventArgs e)
+        {
+            pbSaving.Visible = false;
+        }
+
+        private void btnCheckings_MouseLeave(object sender, EventArgs e)
+        {
+            pbCheck.Visible= false;
+        }
     }
 }

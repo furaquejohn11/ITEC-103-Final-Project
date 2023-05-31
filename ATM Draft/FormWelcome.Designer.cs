@@ -99,6 +99,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.lblSelectDevice);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.comboBox1);
@@ -167,6 +168,7 @@
             // 
             // pnlWelcomeBcash
             // 
+            this.pnlWelcomeBcash.BackColor = System.Drawing.Color.Transparent;
             this.pnlWelcomeBcash.Controls.Add(this.label1);
             this.pnlWelcomeBcash.Controls.Add(this.lblNewtoBCash);
             this.pnlWelcomeBcash.Controls.Add(this.txtBoxID);
@@ -183,6 +185,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(228)))), ((int)(((byte)(175)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(808, 598);
             this.Controls.Add(this.pnlWelcomeBcash);
             this.Controls.Add(this.panel1);
