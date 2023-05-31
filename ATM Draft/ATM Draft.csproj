@@ -36,8 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>bcashIT-icon.ico</ApplicationIcon>
+    <ApplicationIcon>BCASHLOGO1.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup />
   <PropertyGroup />
   <ItemGroup>
@@ -238,7 +239,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bcashIT-icon.ico" />
-    <None Include="Resources\withdrawal.png" />
+    <Content Include="BCASHLOGO1.ico" />
+    <Content Include="BCASHLOGO2.ico" />
+    <Content Include="Untitled-1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
