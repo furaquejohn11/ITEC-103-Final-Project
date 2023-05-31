@@ -156,6 +156,7 @@ namespace ATM_Draft
 
         private void btnQR_Click(object sender, EventArgs e)
         {
+            pnlWelcomeBcash.Location = new Point(116, 12);
             panel1.Visible = true;
             videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[comboBox1.SelectedIndex].MonikerString);
             videoCaptureDevice.NewFrame += videoCaptureDevice_NewFrame;

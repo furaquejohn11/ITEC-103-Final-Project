@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM Draft", "ATM Draft\ATM Draft.csproj", "{BF661ED7-E350-4CB4-94E8-A9D40FA9677D}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{F04E4D7D-B422-4A52-AA3A-F840AD5B3C33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{BF661ED7-E350-4CB4-94E8-A9D40FA9677D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF661ED7-E350-4CB4-94E8-A9D40FA9677D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF661ED7-E350-4CB4-94E8-A9D40FA9677D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04E4D7D-B422-4A52-AA3A-F840AD5B3C33}.Debug|Any CPU.ActiveCfg = Debug
+		{F04E4D7D-B422-4A52-AA3A-F840AD5B3C33}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -33,17 +33,19 @@
             this.btnYes = new System.Windows.Forms.Button();
             this.txtAmount = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
-            this.label1.Location = new System.Drawing.Point(121, 25);
+            this.label1.Location = new System.Drawing.Point(247, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(630, 67);
+            this.label1.Size = new System.Drawing.Size(376, 47);
             this.label1.TabIndex = 3;
-            this.label1.Text = "PLEASE ENTER DESIRED AMOUNT";
+            this.label1.Text = "WITHDRAW MONEY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button3
@@ -52,9 +54,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.button3.Location = new System.Drawing.Point(605, 396);
+            this.button3.Location = new System.Drawing.Point(422, 420);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(211, 55);
+            this.button3.Size = new System.Drawing.Size(401, 55);
             this.button3.TabIndex = 7;
             this.button3.Text = "NO";
             this.button3.UseVisualStyleBackColor = false;
@@ -66,9 +68,9 @@
             this.btnYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYes.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.btnYes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.btnYes.Location = new System.Drawing.Point(605, 324);
+            this.btnYes.Location = new System.Drawing.Point(422, 359);
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(211, 55);
+            this.btnYes.Size = new System.Drawing.Size(401, 55);
             this.btnYes.TabIndex = 8;
             this.btnYes.Text = "YES";
             this.btnYes.UseVisualStyleBackColor = false;
@@ -76,12 +78,13 @@
             // 
             // txtAmount
             // 
-            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmount.Location = new System.Drawing.Point(300, 75);
+            this.txtAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.txtAmount.Font = new System.Drawing.Font("Hamlin", 18F);
+            this.txtAmount.Location = new System.Drawing.Point(280, 145);
             this.txtAmount.Mask = "000000";
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PromptChar = ' ';
-            this.txtAmount.Size = new System.Drawing.Size(258, 31);
+            this.txtAmount.Size = new System.Drawing.Size(499, 46);
             this.txtAmount.TabIndex = 1;
             this.txtAmount.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtAmount.ValidatingType = typeof(int);
@@ -89,14 +92,25 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Hamlin", 15.75F);
+            this.label2.Font = new System.Drawing.Font("Hamlin Light", 18F, System.Drawing.FontStyle.Italic);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
-            this.label2.Location = new System.Drawing.Point(40, 300);
+            this.label2.Location = new System.Drawing.Point(33, 365);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 33);
+            this.label2.Size = new System.Drawing.Size(250, 38);
             this.label2.TabIndex = 12;
-            this.label2.Text = "PLEASE CONFIRM";
+            this.label2.Text = "PLEASE CONFIRM...";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Hamlin", 18F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(56)))), ((int)(((byte)(107)))));
+            this.label3.Location = new System.Drawing.Point(91, 148);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(183, 38);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Enter Amount";
             // 
             // FormWithdraw
             // 
@@ -104,6 +118,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
             this.ClientSize = new System.Drawing.Size(870, 517);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.btnYes);
@@ -125,5 +140,6 @@
         private System.Windows.Forms.Button btnYes;
         private System.Windows.Forms.MaskedTextBox txtAmount;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
